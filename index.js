@@ -14,7 +14,7 @@ function askUser() {
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound() {
+function playRound(round) {
     const computerSelection = computerPlay();
     askUser();
     switch (true) {
@@ -40,8 +40,8 @@ function playRound() {
 
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound();
+    for (let round = 0; round < 5; round++) {
+        playRound(round);
 
         if (playerScore >= 3 || computerScore >= 3) {
             break;
